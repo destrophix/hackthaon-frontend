@@ -10,13 +10,13 @@ function Navigation() {
         <Container>
           <Navbar.Brand href="/home">
             <img
-              src="/logo192.png"
+              src="/logo2.svg"
               width="30"
               height="30"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />{" "}
-            Calendsi
+            QuickHealth
           </Navbar.Brand>
           <Nav className="me-2">
             <Nav.Link href="/login">Login</Nav.Link>

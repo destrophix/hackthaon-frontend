@@ -40,14 +40,14 @@ function Login() {
   }
 
   return (
-    <div className="login d-flex align-items-center">
+    <div className="login d-flex align-items-center bg-secondary bg-gradient text-light">
       <Container>
         <Row className="justify-content-center">
           <Col md={4}>
             {!loggedIn ? (
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <Form.Label>Email address</Form.Label>
+                  <Form.Label>Id</Form.Label>
                   <Form.Control
                     type="email"
                     name="email"
@@ -72,9 +72,13 @@ function Login() {
                 </Button>
                 <hr></hr>
                 <div>
-                  <Link to="/signup">signup</Link>
+                  <Link to="/signup">
+                    <p className="text-light">signup</p>
+                  </Link>
                   <div></div>
-                  <Link to="/signup">forgot password</Link>
+                  <Link to="/signup">
+                    <p className="text-light">forgot password</p>
+                  </Link>
                 </div>
               </Form>
             ) : (

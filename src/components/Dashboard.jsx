@@ -46,18 +46,31 @@ function Dashboard() {
   }, []);
 
   return (
-    <div>
+    <div className="container-fluid">
       {loggedIn ? (
-        <div>
+        <div className="bg-secondary bg-gradient text-warning">
           <div>
-            <Button variant="white" type="submit">
-              <Link to="/create">create</Link>
+            <Button className="" variant="white" type="submit">
+              <Link to="/create">
+                <p className="text-light">Add Doctor</p>
+              </Link>
             </Button>
-            <Button variant="white" type="submit" onClick={logout}>
-              logout
+            <Button
+              className=" float-end"
+              variant="white"
+              type="submit"
+              onClick={logout}
+            >
+              <p className="text-light">logout</p>
             </Button>
           </div>
-          {patient && <PatientInfo patient={patient} doctorInfo={doctorInfo} />}
+          {patient && (
+            <PatientInfo
+              className="d-inline-flex justify-content-center"
+              patient={patient}
+              doctorInfo={doctorInfo}
+            />
+          )}
         </div>
       ) : (
         <div>You are not loggedin </div>
